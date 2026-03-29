@@ -15,6 +15,7 @@ In competitive markets, retaining customers is more cost-effective than acquirin
 * **Power Query:** ETL (Extract, Transform, Load) process.
 
 ## 🗂 Project Structure
+![Dashboard Preview](./Images/dashboard_page_1.png)
 * `/Dataset`: Original customer data (CSV).
 * `/SQL`: Queries used for identifying active and churned users.
 * `/PowerBI_Files`: The `.pbix` file (Main Dashboard).
