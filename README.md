@@ -28,7 +28,7 @@ In competitive markets, retaining customers is more cost-effective than acquirin
 
 ## 👤 Author
 **Seyed Iman Tahami**
-* [LinkedIn](https://www.linkedin.com/in/seyed-iman-tahami/) 
+* [LinkedIn](https://www.linkedin.com/in/itahami/) 
 * [GitHub](https://github.com/imantahami)
 
 ---
