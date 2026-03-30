@@ -1,35 +1,62 @@
-# 📉 Customer Retention & Churn Analytics — Power BI + SQL Project
+# 📉 Customer Retention & Churn Analytics Dashboard | Power BI, SQL, DAX
 
-This project demonstrates an end-to-end data analytics workflow to measure **Customer Retention, Churn Rate, and Customer Lifetime Value (CLV)** patterns using SQL for data extraction and Power BI for visualization.
+This project presents an end-to-end analytics workflow for exploring customer retention, churn behavior, and customer lifetime value (CLV) using SQL, Power BI, DAX, and Power Query.
+
+The goal is to help decision-makers better understand customer behavior, identify churn risks, and monitor key retention KPIs through an interactive dashboard.
 
 ## 🚀 Project Overview
-In competitive markets, retaining customers is more cost-effective than acquiring new ones. This dashboard provides actionable insights into:
-* **Churn Analysis:** Identifying high-risk customer segments.
-* **Retention Metrics:** Calculating Repeat Rate and Active vs. Churned status.
-* **Behavioral Analysis:** Understanding spend patterns and order frequency.
+
+In competitive markets, retaining existing customers is often more cost-effective than acquiring new ones. This project was designed to analyze customer retention and churn patterns through an interactive Power BI dashboard supported by SQL-based data preparation.
+
+The dashboard helps answer questions such as:
+- How many customers are active vs. churned?
+- Which customer groups are more likely to churn?
+- How do repeat customers differ from one-time buyers?
+- What patterns can support better retention strategies?
 
 ## 🔧 Tech Stack
-* **SQL:** Data cleaning and cohort identification.
-* **Power BI:** Data modeling and interactive dashboard design.
-* **DAX:** Advanced measures for Churn Rate and Active Customer counts.
-* **Power Query:** ETL (Extract, Transform, Load) process.
 
-## 🗂 Project Structure
-![Dashboard Preview](./Images/dashboard_page_1.png)
-* `/Dataset`: Original customer data (CSV).
-* `/SQL`: Queries used for identifying active and churned users.
-* `/PowerBI_Files`: The `.pbix` file (Main Dashboard).
-* `/Images`: Screenshots of the final report.
+- **SQL** – data extraction, cleaning, transformation, and churn-related analysis
+- **Power BI** – data modeling, dashboard development, and interactive reporting
+- **DAX** – custom measures for retention KPIs, churn rate, and customer activity
+- **Power Query** – ETL workflow for preparing and shaping the dataset
 
-## 📊 Key Insights from this Project
-* **Churn Rate:** Identified that 30% of customers have churned, requiring a new engagement strategy.
-* **High-Value Customers:** Repeat customers show a **2.5x higher** lifetime value than one-time buyers.
-* **Regional Performance:** The West region shows the highest retention stability.
+## 📌 Key KPIs Tracked
 
-## 👤 Author
-**Seyed Iman Tahami**
-* [LinkedIn](https://www.linkedin.com/in/itahami/) 
-* [GitHub](https://github.com/imantahami)
+- Total Customers
+- Active Customers
+- Churned Customers
+- Churn Rate
+- Retention Rate
+- Repeat Customer Rate
+- Estimated Customer Lifetime Value (CLV)
 
----
-*If you find this project useful, feel free to give it a ⭐!*
+## 💼 Business Value
+
+This dashboard can support decision-makers by:
+- monitoring churn and retention trends
+- identifying at-risk customer groups
+- comparing customer segments based on behavior and value
+- supporting more targeted retention and engagement strategies
+
+## 📊 Key Insights
+
+- Approximately **30% of customers** were identified as churned based on the project’s churn definition.
+- **Repeat customers** showed significantly higher estimated lifetime value compared to one-time buyers.
+- Customer retention patterns varied across segments, with some groups showing more stable repeat behavior.
+
+## 🧠 SQL Analysis
+
+SQL was used to prepare customer-level insights, including:
+- identifying active vs. churned customers
+- calculating repeat purchase behavior
+- aggregating transaction-level data into customer KPIs
+
+Example query:
+
+```sql
+SELECT customer_id,
+       COUNT(order_id) AS total_orders,
+       MAX(order_date) AS last_order_date
+FROM orders
+GROUP BY customer_id;
